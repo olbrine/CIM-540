@@ -17,6 +17,8 @@ function setup() {
 
 function draw() {
   // put drawing code here
+  line(mouseX, 0, mouseX, 1000);
+  line(0, mouseY, 1000, mouseY);
   strokeWeight(4);
   stroke(51);
 
@@ -30,12 +32,14 @@ function draw() {
   triangle(400,noseX,425,425,800,noseX);
 
   //mouth
-  angleMode(DEGREES)
+  angleMode(DEGREES);
   arc(600,800,400,300,95,200);
 
 
   //first pupil
   ellipse(eyeX,300,100,100);
+  fill("black");
+  noFill("black");
 
   //second pupil
   ellipse(eyeY,300,100,100);
@@ -51,6 +55,12 @@ function draw() {
 
   //middle hair
   triangle(200,hairX,500,100,800,hairX);
+
+  //end draw loop
+
+  function mousePressed(){
+    backgroundColor = "purple";
+  }
 
 
 
